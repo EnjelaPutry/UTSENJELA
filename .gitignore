@@ -1,0 +1,18 @@
+# virtual environment
+env/
+
+# python cache
+__pycache__/
+*.pyc
+
+# database lokal
+db.sqlite3
+
+# static hasil collectstatic
+staticfiles/
+
+# log
+*.log
+
+# editor
+.vscode/
