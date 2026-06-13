@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "UTSENJELA/wsgi.py",
-      "use": "@vercel/python"
+  "functions": {
+    "UTSENJELA/wsgi.py": {
+      "runtime": "vercel-python@4.0.0"
     }
-  ],
+  },
   "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "static/$1"
+    },
     {
       "src": "/(.*)",
       "dest": "UTSENJELA/wsgi.py"
