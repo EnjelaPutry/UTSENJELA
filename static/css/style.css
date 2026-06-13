@@ -1,0 +1,212 @@
+/* =============================================================
+   LANGKAH 1: PENGATURAN DASAR (GLOBAL STYLE)
+   Bagian ini untuk mengatur font dan warna dasar seluruh web.
+   ============================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* =============================================================
+   LANGKAH 2: PROFIL HEADER 
+   Mengatur kotak abu-abu, teks putih, dan ikon kontak.
+   ============================================================= */
+.minimal-header {
+  background-color: #4b4b4b; /* Warna abu-abu gelap */
+  color: white !important;
+  text-align: center;
+  padding: 60px 20px; /* Padding ditambah biar kotak lebih lega */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* Foto Profil */
+.profile-img {
+  width: 200px;
+  height: 200px; /* Harus sama agar tetap bulat */
+  border-radius: 50%;
+  border: 5px solid white; /* Border putih dipertebal sedikit */
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Efek bayangan biar makin cakep */
+}
+
+.minimal-header h1 {
+  font-size: 2.2rem;
+  color: white !important;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+}
+
+.minimal-header p {
+  font-size: 1.1rem;
+  color: #e0e0e0 !important;
+  margin-bottom: 15px;
+}
+
+/* Bagian Ikon Kontak (Lokasi & WA) */
+.contact-bar {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  font-size: 0.95rem;
+  color: white !important;
+}
+
+.contact-bar span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-bar i {
+  color: white !important;
+  font-size: 1.1rem;
+}
+
+/* =============================================================
+   LANGKAH 3: KEAHLIAN
+   ============================================================= */
+.skills-section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.skills-section .section-title {
+  border-left: none;
+  padding-left: 0;
+  margin-bottom: 25px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* =============================================================
+   LANGKAH 4: LAYOUT DUA KOLOM (GRID)
+   Membuat konten terbagi menjadi sisi Kiri dan sisi Kanan.
+   ============================================================= */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Membagi 2 kolom sama besar */
+  gap: 50px;
+  align-items: start;
+}
+
+/* Setting untuk HP: Otomatis jadi 1 kolom saja */
+@media (max-width: 768px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =============================================================
+   LANGKAH 5: JUDUL BAGIAN & KARTU DATA
+   Bagian judul yang memiliki garis vertikal biru di sampingnya.
+   ============================================================= */
+.section-title {
+  font-size: 1.4rem;
+  color: #1a3a5f;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  border-left: 5px solid #1a3a5f; /* Garis vertikal biru */
+  padding-left: 15px;
+}
+
+.edu-card {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.edu-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #1a3a5f;
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.edu-content h3 {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  line-height: 1.3;
+}
+
+.edu-major {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* =============================================================
+   LANGKAH 6: FOOTER (BAGIAN PALING BAWAH)
+   Pesan hak cipta di bagian paling bawah halaman.
+   ============================================================= */
+footer {
+  text-align: center;
+  padding: 50px 0;
+  margin-top: 60px;
+  border-top: 1px solid #ddd;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+/* =============================================================
+   LANGKAH 7: RESPONSIVE DESIGN
+   ============================================================= */
+@media (max-width: 600px) {
+  /* Di HP, foto yang 200px kita turunkan ke 150px agar proporsional */
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    border: 4px solid white; /* Border sedikit tipis di HP */
+  }
+
+  /* Nama mengecil sedikit supaya tidak pecah jadi dua baris */
+  .minimal-header h1 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  /* Status Mahasiswi Sains Data mengecil sedikit */
+  .minimal-header p {
+    font-size: 1rem;
+  }
+
+  /* Kontak (Lokasi & WA) jadi berbaris ke bawah agar tidak sempit */
+  .contact-bar {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

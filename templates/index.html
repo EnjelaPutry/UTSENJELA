@@ -1,0 +1,174 @@
+{% load static %}
+<!doctype html>
+<html lang="id">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <title>Profil {{ Enjela }}</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <header class="minimal-header">
+      <div class="header-line"></div>
+
+      <div class="content-box">
+        <img
+          src="{% static 'img/foto.jpeg' %}"
+          alt="Foto Enjela"
+          class="profile-img"
+        />
+        <h1>{{ nama_lengkap }}</h1>
+
+        <p class="subtitle">{{ sub_info }}</p>
+
+        <div class="contact-bar">
+          <span><i class="fas fa-map-marker-alt"></i> {{ lokasi }}</span>
+          <span><i class="fab fa-whatsapp"></i> {{ no_hp }}</span>
+          <span><i class="fas fa-envelope"></i> {{ email }}</span>
+          <span><i class="fab fa-linkedin"></i> {{ linkedin }}</span>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <section class="skills-section">
+        <h2 class="section-title">Keahlian</h2>
+        <div class="skills-container">
+          <div class="skill-item">Desain Grafis</div>
+          <div class="skill-item">Pengolahan Data</div>
+          <div class="skill-item">Statistika</div>
+        </div>
+      </section>
+      <div class="main-grid">
+        <div class="left-column">
+          <section class="education-section">
+            <h2 class="section-title">Pendidikan</h2>
+            <div class="edu-card">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <h3>UIN Salatiga</h3>
+                <p class="edu-major">Sarjana Sains Data (2024 - Sekarang)</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="certification-section" style="margin-top: 40px">
+            <h2 class="section-title">Sertifikasi</h2>
+            <div class="edu-card">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <h3>Sertifikat Keahlian SPSS</h3>
+                <p class="edu-major">ESGI Dataset (2026)</p>
+              </div>
+            </div>
+            <div class="edu-card">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <h3>Intermediate Spreadsheet</h3>
+                <p class="edu-major">Smartpath (2024)</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="achievement-section" style="margin-top: 40px">
+            <h2 class="section-title">Prestasi</h2>
+            <div class="edu-card">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <h3>Penulis Artikel Jurnal Internasional</h3>
+                <p class="edu-major">AICIEB (2025)</p>
+              </div>
+            </div>
+            <div class="edu-card">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <h3>Peserta Lomba Poster Nasional</h3>
+                <p class="edu-major">Festival IkutLomba (2025)</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="right-column">
+          <section class="experience-section">
+            <h2 class="section-title">Pengalaman Organisasi</h2>
+            <div class="edu-card">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <h3>Koordinator Riset dan Keilmuan</h3>
+                <p class="edu-major">HMPS Sains Data (2026 - Sekarang)</p>
+              </div>
+            </div>
+            <div class="edu-card">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <h3>Anggota Litbang dan Evaluasi</h3>
+                <p class="edu-major">Racana UIN Salatiga (2026 - Sekarang)</p>
+              </div>
+            </div>
+            <div class="edu-card">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <h3>Anggota Jaringan Komunikasi</h3>
+                <p class="edu-major">HMPS Sains Data (2025 - 2026)</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="committee-section" style="margin-top: 40px">
+            <h2 class="section-title">Pengalaman Kepanitiaan</h2>
+            <div class="edu-card">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <h3>Panitia NeoDataFest (Seksi Acara)</h3>
+                <p class="edu-major">Tahun 2025</p>
+              </div>
+            </div>
+            <div class="edu-card">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <h3>Panitia Silada (Seksi Dekdok)</h3>
+                <p class="edu-major">Tahun 2025</p>
+              </div>
+            </div>
+            <div class="edu-card">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <h3>Panitia Seminar & HUT (Reka Operasional)</h3>
+                <p class="edu-major">Tahun 2025</p>
+              </div>
+            </div>
+          </section>
+          <section class="social-section" style="margin-top: 40px">
+            <h2 class="section-title">Relawan Sosial</h2>
+            <div class="edu-card">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <h3>Relawan Pengajar</h3>
+                <p class="edu-major">MI Nurul Azhar (2026)</p>
+              </div>
+            </div>
+            <div class="edu-card">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <h3>Relawan Pengajar</h3>
+                <p class="edu-major">SDN Salatiga 06 (2025)</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2026 Enjela Nur Pratama Putri. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
